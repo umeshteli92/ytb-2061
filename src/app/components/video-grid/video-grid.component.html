@@ -1,0 +1,100 @@
+<div class="row">
+
+  <div class="filter-bar mb-4">
+
+   @for (category of categories; track category.value) {
+  <button
+    (click)="filterVideos(category.value)"
+    [class.active]="selectedType === category.value">
+
+    {{ category.label }}
+
+  </button>
+}
+  </div>
+
+@for (video of filteredVideos; track video.id) {
+  <div class="col-12 col-md-4">
+
+    <div class="video-card">
+
+      <iframe
+        class="video-frame"
+        [src]="video.url"
+        allowfullscreen>
+      </iframe>
+
+      <div class="d-flex justify-content-between mt-2 pt-1">
+
+        <div class="video-info col-10">
+
+          <img
+            class="channel-avatar"
+            [src]="video.channelImg" />
+
+          <div class="text">
+            <h3 class="title">{{ video.title }}</h3>
+            <p class="channel">{{ video.channel }}</p>
+            <p class="meta">{{ video.views }}</p>
+          </div>
+
+        </div>
+
+        @if (video.showMenu) {
+
+          <div class="menu-container">
+
+            <div
+              class="popverMenu"
+              (click)="toggleMenu(video, $event)">
+
+              <span></span>
+              <span></span>
+              <span></span>
+
+            </div>
+
+            @if (video.menuOpen) {
+
+              <div class="custom-popover">
+
+                <div class="menu-item">
+                  <i class="pi pi-clock"></i>
+                  <span>Watch later</span>
+                </div>
+
+                <div class="menu-item">
+                  <i class="pi pi-bookmark"></i>
+                  <span>Save to playlist</span>
+                </div>
+
+                <div class="menu-item">
+                  <i class="pi pi-share-alt"></i>
+                  <span>Share</span>
+                </div>
+
+                <div class="menu-item">
+                  <i class="pi pi-ban"></i>
+                  <span>Not interested</span>
+                </div>
+
+                <div class="menu-item">
+                  <i class="pi pi-flag"></i>
+                  <span>Report</span>
+                </div>
+
+              </div>
+
+            }
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+}
+</div>

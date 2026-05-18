@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+out-tsc/
+build/
+
+# Angular cache
+.angular/
+
+# Environment files (IMPORTANT - secrets)
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Coverage reports
+coverage/
+
+# Temporary files
+.tmp/
+temp/
+
+# Angular SSR (if used)
+server/
+.prerender/
+
+# Babel cache (if used manually or via tooling)
+.babelrc-cache
+babel-cache/
