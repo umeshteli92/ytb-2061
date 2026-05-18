@@ -58,6 +58,7 @@
   flex-wrap      : nowrap;
   overflow-x     : auto;
   scrollbar-width: none; 
+  justify-content: space-between;
 
   &::-webkit-scrollbar {
   display: none;
@@ -71,6 +72,11 @@
     margin-left     : 10px;
     border-radius   : 12px;
     min-width       : auto;
+
+    &.active {
+      background-color: #000000;
+      color           : #ffffff;
+    }
   }
 }
 

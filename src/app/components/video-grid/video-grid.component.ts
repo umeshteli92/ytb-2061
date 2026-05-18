@@ -37,26 +37,19 @@ export class VideoGridComponent implements OnInit {
     { label: "Tech", value: "tech" },
     { label: "Music", value: "music" },
     { label: "News", value: "news" },
-    { label: "Cars", value: "cars" },
-    { label: "Tech", value: "tech" },
-    { label: "Music", value: "music" },
-    { label: "News", value: "news" },
-    { label: "Cars", value: "cars" },
-    { label: "Tech", value: "tech" },
-    { label: "Music", value: "music" },
-    { label: "News", value: "news" },
-    { label: "Cars", value: "cars" },
-    { label: "Tech", value: "tech" },
-    { label: "Music", value: "music" },
-    { label: "News", value: "news" },
-    { label: "Cars", value: "cars" },
-    { label: "Tech", value: "tech" },
-    { label: "Music", value: "music" },
-    { label: "News", value: "news" },
-    { label: "Cars", value: "cars" },
-    { label: "Tech", value: "tech" },
-    { label: "Music", value: "music" },
-    { label: "News", value: "news" },
+    { label: "f1", value: "f1" },
+    { label: "f2", value: "f2" },
+    { label: "f3", value: "f3" },
+    { label: "f4", value: "f4" },
+    { label: "f5", value: "f5" },
+    { label: "f6", value: "f6" },
+    { label: "f7", value: "f7" },
+    { label: "f8", value: "f8" },
+    { label: "f9", value: "f9" },
+    { label: "f10", value: "f10" },
+    { label: "f11", value: "f11" },
+    { label: "f12", value: "f12" },
+    
   ];
   filteredVideos: Video[] = [];
 
@@ -67,7 +60,7 @@ export class VideoGridComponent implements OnInit {
   currentIndex = 0;
 
   ngOnInit(): void {
-    const types = ["cars", "tech", "music", "news"];
+    const types = ["cars", "tech", "music", "news", "f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12"];
     this.allVideos = Array.from({ length: 50 })
       .map((_, i) => {
         const type = types[i % types.length];
